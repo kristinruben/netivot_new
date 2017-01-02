@@ -12,9 +12,4 @@ class Event < ActiveRecord::Base
   validate :location_id
   validate :registration_link
 
-  # 
-  # attr_accessor :name, :start_at_time, :end_at_time, :start_at_date, :end_at_date,
-  #   :location_display_string, :description, :location_id, :registration_link
-
-
 end
