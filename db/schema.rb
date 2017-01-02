@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170101211141) do
+=======
+ActiveRecord::Schema.define(version: 20170101165339) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +36,11 @@ ActiveRecord::Schema.define(version: 20170101211141) do
     t.string   "registration_link"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+<<<<<<< HEAD
     t.integer  "location_id"
     t.index ["location_id"], name: "index_events_on_location_id", using: :btree
+=======
+>>>>>>> master
   end
 
   create_table "locations", force: :cascade do |t|
@@ -44,5 +51,8 @@ ActiveRecord::Schema.define(version: 20170101211141) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   add_foreign_key "events", "locations"
+=======
+>>>>>>> master
 end
