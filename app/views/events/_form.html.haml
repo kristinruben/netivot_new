@@ -1,0 +1,44 @@
+%h4 New Event
+
+= form_for @event do |f|
+  .row
+    .large-7.columns
+      = f.label :name
+      = f.text_field :name
+      = f.label :location_display_string
+      = f.text_field :location_display_string
+      .row
+        .large-8.columns
+          = f.label :registration_link
+          = f.text_field :registration_link
+
+      .row
+        .large-3.medium-4.small-12.left.columns
+          = f.label :date
+          = f.text_field :start_at_date
+        .large-3.medium-4.small-6.left.columns
+          .start.timepicker
+            = f.label :start_at_time
+            = f.text_field :start_at_time
+        .large-3.medium-4.small-6.left.columns
+          .end.timepicker
+            = f.label :end_at_time
+            = f.text_field :end_at_time
+      .row
+        .large-3.medium-4.small-12.left.columns
+          = f.label :location_id
+          = f.text_field :location_id
+    .large-12.columns
+      = f.label :description
+      = f.text_area :description, rows: 15
+      .row
+        .large-3.small-2.columns.right.text-right
+          = f.submit 'Save', class: 'small button', data: { disable_with: 'Please wait...' }
+
+:javascript
+  $('#event_start_time').combodate();
+  $('#event_end_time').combodate();
+  $('#event_date').fdatepicker({
+    format: 'mm-dd-yyyy',
+    startDate: new Date()
+  });

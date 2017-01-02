@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NetivotNew</title>
+    <title>Netivot</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://use.fontawesome.com/92d99cf3de.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
+<body>
+
+  <!-- Header -->
+    <div id="header">
+      <h1 id="logo"><%= link_to("Netivot", root_path) %></h1>
+      <nav id="nav">
+        <ul>
+          <li><%= link_to("Home", root_path) %></li>
+          <li>
+            <a href="#">About</a>
+            <ul>
+              <li> <%= link_to("Our Team", new_team_path) %></li>
+              <li> Join Netivot</li>
+              <!-- <li>
+                <a href="#">Submenu</a>
+                <ul>
+                  <li><a href="#">Option 1</a></li>
+                  <li><a href="#">Option 2</a></li>
+                  <li><a href="#">Option 3</a></li>
+                  <li><a href="#">Option 4</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><%= link_to("Events", events_path) %></li>
+          <li><%= link_to("Netivot Network", new_network_path) %></li>
+          <li><%= link_to("Resources", new_resource_path) %></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <header class="major">
+            <h2>Netivot</h2>
+            <p>an international community for LGBTQ Jews engaged with traditional Judaism</p>
+          </header>
+          <div class="row 200%">
+            <div class="4u 12u$(medium)">
+
+              <!-- Sidebar -->
+                <section id="sidebar">
+                  <section>
+                    <h4>Boston Beach Day</h4>
+                    <p>On August 28, Netivot Boston is going to the beach!</p>
+                    <footer>
+                      <ul class="actions">
+                        <li><%= button_to("Learn More", "https://docs.google.com/forms/d/e/1FAIpQLSdcwjrnDdGd-CQzdsM915adU0XbZEAuAifTbYWXLbG2zdr5rw/viewform?c=0&w=1") %></li>
+                      </ul>
+                    </footer>
+                  </section>
+                  <hr />
+                  <section>
+                    <h4>Netivot Network</h4>
+                    <p>We’re excited to announce the launch of our new program, Netivot Network!</p>
+                    <footer>
+                      <ul class="actions">
+                        <li><%= button_to("Learn More", new_network_path, method: :get) %></li>
+                      </ul>
+                    </footer>
+                  </section>
+                </section>
+
+            </div>
+            <div class="8u$ 12u$(medium) important(medium)">
+              <%= yield %>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row 200% uniform">
+
+            <section class="4u 12u$(medium) 12u$(small)">
+              <header class="major">
+                <h3>About</h3>
+              </header>
+              <p>Netivot is an international community that supports LGBTQ Jews engaged with traditional Judaism. We hold social and educational events that explore the intersection between LGBTQ and Orthodox/traditional Jewish identities.</p>
+              <ul class="actions">
+                <li><a href="#" class="button alt">Learn more</a></li>
+              </ul>
+            </section>
+            <section class="4u 12u$(medium) 12u$(small)">
+
+            </section>
+            <section class="4u$ 6u$(medium) 12u$(small)">
+              <header class="major">
+                <h3>Contact</h3>
+              </header>
+              <ul class="labeled-icons">
+                <li>
+                  <h4 class="icon fa-envelope"><span class="label">Email</span></h4>
+                  <%= mail_to("netivotlgbtq@gmail.com", "netivotlgbtq@gmail.com") %>
+                </li>
+                <li>
+                  <h4 class="icon fa-instagram"><span class="label">Instagram</span></h4>
+                  <%= link_to("instagram.com/netivot", "https://www.instagram.com/netivot/") %>
+                </li>
+                <li>
+                  <h4 class="icon fa-twitter"><span class="label">Twitter</span></h4>
+                  <%= link_to("@netivotlgbtq", "https://twitter.com/netivotlgbtq") %>
+                </li>
+                <li>
+                  <h4 class="icon fa-facebook"><span class="label">Facebook</span></h4>
+                  <%= link_to("facebook.com/netivotlgbtq", "https://www.facebook.com/netivotlgbtq") %>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; Netivot. All rights reserved.
+        </div>
+      </div>
   </body>
 </html>
