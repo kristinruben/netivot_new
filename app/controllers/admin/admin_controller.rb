@@ -1,6 +1,6 @@
 class Admin::AdminController < ApplicationController
 
-  before_filter :authenticate_admin_user!
+  before_filter :authenticate_admin!
 
   def save_as_csv(filename)
     headers['Content-Disposition'] = %Q[attachment; filename=#{filename}.csv]

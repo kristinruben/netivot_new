@@ -11,124 +11,273 @@
     <script src="https://use.fontawesome.com/92d99cf3de.js"></script>
   </head>
 
-<body>
+  <body>
 
-  <!-- Header -->
-    <div id="header">
-      <h1 id="logo"><%= link_to("Netivot", root_path) %></h1>
-      <nav id="nav">
-        <ul>
-          <li><%= link_to("Home", root_path) %></li>
-          <li>
-            <a href="#">About</a>
-            <ul>
-              <li> <%= link_to("Our Team", new_team_path) %></li>
-              <li> Join Netivot</li>
-              <!-- <li>
-                <a href="#">Submenu</a>
-                <ul>
-                  <li><a href="#">Option 1</a></li>
-                  <li><a href="#">Option 2</a></li>
-                  <li><a href="#">Option 3</a></li>
-                  <li><a href="#">Option 4</a></li>
-                </ul>
-              </li> -->
-            </ul>
-          </li>
-          <li><%= link_to("Events", events_path) %></li>
-          <li><%= link_to("Netivot Network", new_network_path) %></li>
-          <li><%= link_to("Resources", new_resource_path) %></li>
+    <!-- Header -->
+      <header id="header">
+        <nav>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Menu -->
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#board">Our Board</a></li>
+          <li><a href="generic.html">Events</a></li>
+          <li><a href="elements.html">Netivot Network</a></li>
+          <li><a href="elements.html">Resources</a></li>
+        </ul>
+        <ul class="actions vertical">
+          <li><a href="#" class="button fit">Log In</a></li>
         </ul>
       </nav>
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Intro -->
+          <section id="intro" class="wrapper featured style1">
+            <div class="inner">
+              <span class="image"><%= image_tag "netivot.svg" %></span>
+              <div class="content">
+                <header>
+                  <h1>Netivot</h1>
+                  <p>an international LGBTQ<br />
+                  traditional Jewish community</p>
+                </header>
+                <footer>
+                  <ul class="actions">
+                    <li><a href="#about" class="button big">Get Started</a></li>
+                  </ul>
+                </footer>
+              </div>
+            </div>
+          </section>
+
+        <!-- One -->
+          <section id="about" class="wrapper style2 special">
+            <div class="inner">
+              <header>
+                <h2>About</h2>
+                <p>We are Netivot</p>
+              </header>
+              <!-- <ul class="icons major style2">
+                <li><span class="icon fa-code"><span class="label">Lorem</span></span></li><li>
+                <span class="icon fa-cog"><span class="label">Ipsum</span></span></li><li>
+                <span class="icon fa-diamond"><span class="label">Dolor</span></span></li><li>
+                <span class="icon fa-camera-retro"><span class="label">Feugiat</span></span></li><li>
+                <span class="icon fa-briefcase"><span class="label">Tempus</span></span></li> -->
+              <!-- </ul> -->
+              <p>We are Netivot, a group of LGBTQ Jews in the Boston, New York, and Tel Aviv areas who are engaged in traditional Judaism. Some of us come from Orthodox or traditional backgrounds, others are currently exploring a traditional Jewish identity. Our mission is to create a space to explore the intersection between our LGBTQ and traditional Jewish identities, and to move the traditional community towards greater understanding and acceptance of LGBTQ Jews.<br /><br />
+              The literal translation of Netivot is “paths”. Netivot was created because of a need to create another path for LGBTQ Jews who have connections to traditional Judaism. Netivot serves as a warm, welcoming community for LGBTQ Jews interested in growing and learning in a traditionally minded environment. We are also committed to moving the traditional community to greater understanding and acceptance of LGBTQ Jews.<br /><br />
+              Over the past 2+ years, Netivot has burgeoned into a thriving community in Boston, with over 70 members, monthly Shabbat dinners, and social events. Netivot has excelled in Boston, so its leadership has decided to expand and create new chapters in New York City and Tel Aviv. Over the next 2 years, we plan to grow Netivot in all 3 cities, while still maintaining its tight-knit community feel.</p>
+              <footer>
+                <ul class="actions">
+                  <li><a href="#board" class="button">Our Board</a></li>
+                </ul>
+              </footer>
+            </div>
+          </section>
+
+        <!-- Two -->
+          <section id="board" class="wrapper style1 special">
+            <div class="inner">
+              <header>
+                <h2>The Netivot Board</h2>
+                <!-- <p>Rutrum facilisis. Class aptent taciti sociosqu<br />
+                litora torquent et conubia etiam nostra.</p> -->
+              </header>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "morris.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Morris Alper</h3>
+                    <p>Co-Founder; Tel Aviv President; <br />International Public Relations Coordinator</p>
+                  </header>
+                  <p>Hailing from Palo Alto, California, Morris recently graduated from MIT with a BS in math and linguistics. He then moved to Israel to start Netivot Tel Aviv. Morris has been an active participant and organizer for various Jewish and LGBTQ groups on- and off-campus. One of the founding members of Netivot, Morris feels passionately about opening up the traditional Jewish community to LGBTQ+ people. He has been interning at a startup developing automated speech recognition technologies, and in his spare time he enjoys cooking and practicing his Japanese.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "avi.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Avi Fuld</h3>
+                    <p>Co-Founder; New York Chair;<br />
+                    International President</p>
+                  </header>
+                  <p>Avi was born and raised in Brookline, Massachusetts. He attended Brandeis University where he studied Business and Psychology. During college, Avi was active in the campus Hillel and Chabad, where he loved planning social and educational events. Since college, Avi has been working in IT Consulting at mid-sized firm in downtown Boston, and has has helped co-found Netivot. In his spare time, Avi loves to explore new nooks of Boston, host dinner parties, and run along the Charles River.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <section class="spotlight">
+                <span class="image"><%= image_tag "zahava.jpg" %></span>
+                <div class="content">
+                  <header>
+                    <h3>Zahava Stern</h3>
+                    <p>Co-Founder; Boston Chair;
+                    International Vice President</p>
+                  </header>
+                  <p>Zahava is a founding member of Netivot. She moved to Boston in 2012 when she started law school and has been an active member of the Jewish LGBTQ+ community in Boston since then. Zahava grew up in Teaneck, NJ. She attended Moriah for elementary and middle school, Frisch for high school, spent a gap year in in Israel at Ein Hanatziv, and went to college at UMass Amherst. Her favorite thing about Netivot dinners is that it creates a safe space for young LGBTQ+ Jews to relax and be themselves.</p>
+                  <footer>
+                    <!-- <ul class="actions">
+                      <li><a href="#" class="button">Details</a></li>
+                    </ul> -->
+                  </footer>
+                </div>
+              </section>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos malesuada fames ac turpis egestas. In non lorem amet. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique eu nibh.</p>
+              <footer>
+                <ul class="actions">
+                  <li><a href="#" class="button">Details</a></li>
+                </ul>
+              </footer>
+            </div>
+          </section>
+
+        <!-- Three -->
+          <section class="wrapper style3 special">
+            <div class="inner">
+              <header>
+                <h2>Amet ullamcorper</h2>
+                <p>Aptent taciti sociosqu litora torquent et conubia sed etiam.<br />
+                Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam<br />
+                turpis mauris, ultricies erat malesuada quis.</p>
+              </header>
+              <footer>
+                <ul class="actions">
+                  <li><a href="#" class="button big">Get Started</a></li>
+                </ul>
+              </footer>
+            </div>
+          </section>
+
+        <!-- Footer -->
+          <section id="footer" class="wrapper split style2">
+            <div class="inner">
+              <section>
+                <header>
+                  <h3>Magna lorem ipsum</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis egestas amet non lorem amet.</p>
+                <ul class="icons">
+                  <li><a href="mailto:netivotlgbtq@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                  <li><a href="https://twitter.com/netivotlgbtq" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
+                  <li><a href="https://www.instagram.com/netivot/" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
+                  <li><a href="https://www.facebook.com/netivotlgbtq" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+                  <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+              </section>
+              <section>
+                <form method="post" action="#">
+                  <div class="field half first"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                  <div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                  <div class="field"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                  <ul class="actions">
+                    <li><input type="submit" value="Send Message" /></li>
+                  </ul>
+                </form>
+              </section>
+            </div>
+            <div class="copyright">
+              <p>&copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet nullam.</p>
+            </div>
+          </section>
+
     </div>
-
-    <!-- Main -->
-      <section id="main">
-        <div class="container">
-          <header class="major">
-            <h2>Netivot</h2>
-            <p>an international community for LGBTQ Jews engaged with traditional Judaism</p>
-          </header>
-          <div class="row 200%">
-            <div class="4u 12u$(medium)">
-
-              <!-- Sidebar -->
-                <section id="sidebar">
-                  <section>
-                    <h4>Boston Beach Day</h4>
-                    <p>On August 28, Netivot Boston is going to the beach!</p>
-                    <footer>
-                      <ul class="actions">
-                        <li><%= button_to("Learn More", "https://docs.google.com/forms/d/e/1FAIpQLSdcwjrnDdGd-CQzdsM915adU0XbZEAuAifTbYWXLbG2zdr5rw/viewform?c=0&w=1") %></li>
-                      </ul>
-                    </footer>
-                  </section>
-                  <hr />
-                  <section>
-                    <h4>Netivot Network</h4>
-                    <p>We’re excited to announce the launch of our new program, Netivot Network!</p>
-                    <footer>
-                      <ul class="actions">
-                        <li><%= button_to("Learn More", new_network_path, method: :get) %></li>
-                      </ul>
-                    </footer>
-                  </section>
-                </section>
-
-            </div>
-            <div class="8u$ 12u$(medium) important(medium)">
-              <%= yield %>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Footer -->
-      <div id="footer">
-        <div class="container">
-          <div class="row 200% uniform">
-
-            <section class="4u 12u$(medium) 12u$(small)">
-              <header class="major">
-                <h3>About</h3>
-              </header>
-              <p>Netivot is an international community that supports LGBTQ Jews engaged with traditional Judaism. We hold social and educational events that explore the intersection between LGBTQ and Orthodox/traditional Jewish identities.</p>
-              <ul class="actions">
-                <li><a href="#" class="button alt">Learn more</a></li>
-              </ul>
-            </section>
-            <section class="4u 12u$(medium) 12u$(small)">
-
-            </section>
-            <section class="4u$ 6u$(medium) 12u$(small)">
-              <header class="major">
-                <h3>Contact</h3>
-              </header>
-              <ul class="labeled-icons">
-                <li>
-                  <h4 class="icon fa-envelope"><span class="label">Email</span></h4>
-                  <%= mail_to("netivotlgbtq@gmail.com", "netivotlgbtq@gmail.com") %>
-                </li>
-                <li>
-                  <h4 class="icon fa-instagram"><span class="label">Instagram</span></h4>
-                  <%= link_to("instagram.com/netivot", "https://www.instagram.com/netivot/") %>
-                </li>
-                <li>
-                  <h4 class="icon fa-twitter"><span class="label">Twitter</span></h4>
-                  <%= link_to("@netivotlgbtq", "https://twitter.com/netivotlgbtq") %>
-                </li>
-                <li>
-                  <h4 class="icon fa-facebook"><span class="label">Facebook</span></h4>
-                  <%= link_to("facebook.com/netivotlgbtq", "https://www.facebook.com/netivotlgbtq") %>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-        <div class="copyright">
-          &copy; Netivot. All rights reserved.
-        </div>
-      </div>
   </body>
 </html>

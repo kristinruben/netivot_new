@@ -1,4 +1,5 @@
 class Admin::EventsController < Admin::AdminController
+
   def index
     @events = Event.all
   end
@@ -13,7 +14,6 @@ class Admin::EventsController < Admin::AdminController
 
   def create
     @event = Event.create(event_params)
-    binding.pry
   # @event.listed_by_user = current_user
 
     if @event.valid?
@@ -22,7 +22,6 @@ class Admin::EventsController < Admin::AdminController
       redirect_to action: :index
     else
       flash.now[:alert] = "Bad event. #{@event.errors.full_messages.join(', ')}"
-      binding.pry
       render :new
     end
   end

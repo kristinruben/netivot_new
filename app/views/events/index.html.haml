@@ -2,10 +2,16 @@
   %h2 Events
   - if @events
     - @events.each do |event|
-      %li= event.name
+      %div.event.12u
+        %h4= event.name
+        %p
+          %span= event.location_id
+          %br
+          %span= event.start_at_date
+          %br
+          %span= event.description
+      %br
   - else
     %p We don't have any upcoming events scheduled as of #{Time.now.strftime('%m/%d/%Y')}, but please check back soon!
 
 %br
-
-  = button_to("New Event", new_event_path, method: :get)

@@ -11,7 +11,16 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require main
- *= require font-awesome.min
+ *= require main.scss
  *= require_self
  */
+
+
+.event {
+  /*background-color: #9dd6d6;*/
+  background-color: #F6F6F6;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+
+}

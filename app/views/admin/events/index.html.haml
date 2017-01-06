@@ -1,0 +1,12 @@
+%section#content
+  %h2 Events
+  - if @events
+    - @events.each do |event|
+      %li= event.name
+      %p.close X
+  - else
+    %p We don't have any upcoming events scheduled as of #{Time.now.strftime('%m/%d/%Y')}, but please check back soon!
+
+%br
+
+  = button_to("New Event", new_admin_event_path, method: :get)

@@ -13,7 +13,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    binding.pry
   # @event.listed_by_user = current_user
 
     if @event.valid?
@@ -22,7 +21,6 @@ class EventsController < ApplicationController
       redirect_to action: :index
     else
       flash.now[:alert] = "Bad event. #{@event.errors.full_messages.join(', ')}"
-      binding.pry
       render :new
     end
   end

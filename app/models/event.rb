@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 
-  # has_many :attendees, dependent: :destroy
+  has_many :attendees
 
   validates :name, presence: true
   validate :start_at_time
