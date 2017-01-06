@@ -35,7 +35,7 @@
 
 	.wrapper {
 		&.style3 {
-			@include vendor('background-image', 'url("../../images/pic05.jpg")');
+			@include vendor('background-image', 'url("table.jpg")');
 			background-attachment: scroll;
 		}
 
